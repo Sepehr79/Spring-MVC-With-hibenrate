@@ -14,10 +14,11 @@
 <head id="mainPage">
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/main2.js"></script>
     <title>Main page</title>
     <meta charset="UTF-8">
 </head>
-<body onload="alertHello()">
+<body onload="configuration()">
     <h1 id="test">People list</h1>
 
     <a href="addingUserList">Add new customer</a>
@@ -43,7 +44,7 @@
                 <tr>
                     <td>${user.email}</td><td>${user.name}</td><td>${user.lastName}</td><td>${user.age}</td>
                     <td>
-                        <a href="${updateLine}">Edit</a> | <a href="${deleteLink}">Delete</a>
+                        <a href="${updateLine}">Edit</a> | <a href="${deleteLink}" id="deleteLink">Delete</a>
                     </td>
                 </tr>
             </c:forEach>
