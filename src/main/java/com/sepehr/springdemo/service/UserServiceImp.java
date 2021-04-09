@@ -31,6 +31,10 @@ public class UserServiceImp implements UserService {
         return userDAO.getReferenceById(id);
     }
 
+    public void delete(User user) {
+        userDAO.delete(user);
+    }
+
     public void updateUser(User user){
         userDAO.update(user);
     }

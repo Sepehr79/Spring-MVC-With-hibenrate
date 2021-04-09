@@ -36,9 +36,15 @@
                     <c:param name="userId" value="${user.id}"/>
                 </c:url>
 
+                <c:url var="deleteLink" value="/users/deleteUser">
+                    <c:param name="userId" value="${user.id}"/>
+                </c:url>
+
                 <tr>
                     <td>${user.email}</td><td>${user.name}</td><td>${user.lastName}</td><td>${user.age}</td>
-                    <td> <a href="${updateLine}">Edit</a></td>
+                    <td>
+                        <a href="${updateLine}">Edit</a> | <a href="${deleteLink}">Delete</a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>

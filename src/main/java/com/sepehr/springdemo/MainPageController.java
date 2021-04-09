@@ -60,5 +60,14 @@ public class MainPageController {
         return "add-customer";
     }
 
+    @RequestMapping("/deleteUser")
+    public String deleteUser(@RequestParam("userId")Integer id){
+        User user = service.getUserById(id);
+
+        service.delete(user);
+
+        return "redirect:/users/list";
+    }
+
 
 }
